@@ -152,7 +152,7 @@ class App:
             self.spaceship.move(Direction.RIGHT, self.display_surf)
     
     def collision_detect(self):
-        if pygame.sprite.spritecollide(self.spaceship, self.star_list, True):
+        if pygame.sprite.spritecollide(self.spaceship, self.star_list, False):
             self.is_running = False
     
     def increase_score_with_clock(self):
